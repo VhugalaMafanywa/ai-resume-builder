@@ -24,7 +24,7 @@ def resume_form():
         template = request.form.get('template')
 
         prompt = f"""
-Write a complete professional resume for the following candidate.
+Write a complete professional ATS resume for the following candidate.
 
 Name: {name}
 Target Job Title: {job_title}
