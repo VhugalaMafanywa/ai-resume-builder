@@ -1,0 +1,4 @@
+Flask
+cohere
+python-docx
+xhtml2pdf
