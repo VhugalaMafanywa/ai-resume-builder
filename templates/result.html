@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated Resume for {{ name }}</title>
+    <!-- Google Fonts: Poppins for headings, Inter for body text -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Define CSS Variables for a consistent color palette */
+        :root {
+            --primary-color: #5c06ac; /* A vibrant blue */
+            --secondary-color: #343a40; /* Darker text/accents */
+            --accent-color: #28a745; /* Green for success/action */
+            --light-bg: #f8f9fa; /* Light background for sections */
+            --dark-text: #212529; /* Main text color */
+            --light-text: #6c757d; /* Lighter text for descriptions */
+            --border-color: #e9ecef; /* Light border for separation */
+            --box-shadow-light: 0 0.5rem 1rem rgba(0, 0, 0, 0.05); /* Subtle shadow */
+            --border-radius: 0.5rem; /* Rounded corners */
+        }
+
+        /* Basic Reset and Body Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif; /* Modern sans-serif font */
+            line-height: 1.7;
+            color: var(--dark-text);
+            background-color: var(--light-bg); /* Light background */
+            padding: 2rem;
+            min-height: 100vh; /* Ensure body takes full viewport height */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Main Container for Resume */
+        .resume-wrapper {
+            max-width: 900px; /* Wider for better resume layout */
+            width: 100%;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow-light);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Header Styles */
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        header h1 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--secondary-color);
+            font-size: 2.5rem; /* Larger heading */
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.05rem;
+        }
+
+        header p.job-title {
+            font-size: 1.25rem;
+            color: var(--light-text);
+            margin-top: 0.5rem;
+        }
+
+        /* Resume Content Area */
+        .resume-content {
+            font-family: 'Inter', sans-serif; /* Consistent body font */
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        /* Section Styling */
+        .resume-section {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px dashed var(--border-color); /* Dashed border for subtle separation */
+        }
+
+        .resume-section:last-of-type {
+            border-bottom: none; /* No border for the last section */
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        /* Changed from .section-title to h2.section-title for semantic heading */
+        h2.section-title {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 1.35rem; /* Slightly larger section titles */
+            margin-bottom: 1rem;
+            position: relative;
+            padding-left: 1.5rem; /* Space for icon */
+        }
+
+        /* Add a simple icon or bullet for section titles */
+        h2.section-title::before {
+            content: '\2022'; /* Unicode bullet point */
+            color: var(--accent-color); /* Accent color for the bullet */
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.5em;
+            line-height: 1;
+        }
+
+        /* Paragraphs within resume content */
+        .resume-content p {
+            margin-bottom: 0.75rem;
+            color: var(--dark-text);
+        }
+
+        /* Line breaks for empty lines */
+        .resume-content br {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        /* Download Options */
+        .download-options {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem; /* Increased gap */
+            margin-top: 2.5rem;
+            flex-wrap: wrap;
+            width: 100%; /* Take full width of parent */
+            max-width: 900px; /* Align with resume container */
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.8rem; /* Adjusted padding */
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 1.1rem; /* Slightly larger font */
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2); /* Shadow specific to primary color */
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem; /* Space between icon and text */
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        button:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px); /* More pronounced lift effect */
+            box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3); /* Enhanced shadow on hover */
+        }
+
+        button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            .resume-wrapper {
+                padding: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p.job-title {
+                font-size: 1.1rem;
+            }
+
+            h2.section-title { /* Updated selector */
+                font-size: 1.2rem;
+            }
+
+            .download-options {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: stretch; /* Stretch buttons to full width */
+            }
+
+            button {
+                padding: 0.7rem 1.5rem;
+                font-size: 1rem;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+                margin: 0;
+                color: black;
+                -webkit-print-color-adjust: exact !important; /* For background colors */
+                print-color-adjust: exact !important;
+            }
+
+            .resume-wrapper {
+                box-shadow: none;
+                border: 1px solid #ccc; /* Subtle border for print */
+                margin: 1cm auto;
+                max-width: 18cm; /* Standard paper width minus margins */
+                padding: 1.5cm;
+            }
+
+            .download-options {
+                display: none; /* Hide download buttons when printing */
+            }
+
+            header {
+                border-bottom: 1px solid #ccc;
+            }
+
+            button {
+                background-color: #f0f0f0 !important; /* Light background for print buttons if visible */
+                color: black !important;
+                box-shadow: none !important;
+                transform: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-wrapper">
+        <header>
+            <h1>{{ name }}</h1>
+            <p class="job-title">{{ job_title }}</p> <!-- Assuming job_title is also passed -->
+        </header>
+
+        <main>
+            <div class="resume-content">
+                {% set section_open = false %}
+                {% for line in resume.split('\n') %}
+                    {% if line.startswith('*') and line.endswith('*') %}
+                        {% if section_open %}
+                            </div> <!-- Close previous resume-section -->
+                        {% endif %}
+                        <div class="resume-section">
+                            <h2 class="section-title">{{ line[1:-1] }}</h2> <!-- Changed to h2 -->
+                        {% set section_open = true %}
+                    {% elif line.strip() %}
+                        {% set cleaned_line = line %}
+                        {% if line.startswith('*') %}
+                            {# If it starts with a star but isn't a full section title, remove the leading star #}
+                            {% set cleaned_line = line[1:] %}
+                        {% endif %}
+                        <p>{{ cleaned_line }}</p>
+                    {% else %}
+                        <br> <!-- Preserve empty lines for spacing -->
+                    {% endif %}
+                {% endfor %}
+                {% if section_open %}
+                    </div> <!-- Close the very last resume-section -->
+                {% endif %}
+            </div>
+        </main>
+    </div>
+
+    <div class="download-options">
+        <form action="/download_pdf" method="post">
+            <button type="submit">
+                <i class="fas fa-file-pdf"></i> Download as PDF
+            </button>
+        </form>
+        <form action="/download_docx" method="post">
+            <button type="submit">
+                <i class="fas fa-file-word"></i> Download as DOCX
+            </button>
+        </form>
+    </div>
+</body>
+</html>

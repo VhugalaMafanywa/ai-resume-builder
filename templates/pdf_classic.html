@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head><title>Resume PDF</title></head>
+<body>
+    <h1>{{ resume.name }}</h1>
+    <h2>Professional Summary</h2>
+    <p>{{ resume.summary }}</p>
+
+    <h2>Work Experience</h2>
+    {% for exp in resume.experience %}
+        <p><strong>{{ exp.position }}</strong> at {{ exp.company }}</p>
+        <ul>
+        {% for item in exp.details %}
+            <li>{{ item }}</li>
+        {% endfor %}
+        </ul>
+    {% endfor %}
+
+    <h2>Education</h2>
+    <p>{{ resume.education }}</p>
+
+    <h2>Skills</h2>
+    <ul>
+        {% for skill in resume.skills %}
+        <li>{{ skill }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Projects</h2>
+    {% for project in resume.projects %}
+        <p><strong>{{ project.title }}</strong>: {{ project.description }}</p>
+    {% endfor %}
+</body>
+</html>
