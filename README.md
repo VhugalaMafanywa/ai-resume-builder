@@ -6,7 +6,7 @@ A web tool that helps job seekers generate resumes using AI (OpenAI API) and Goo
 [ Use Resume Generator](https://ai-resume-builder-sfhe.onrender.com)
 
 ##  Screenshot
-![Resume Generator Screenshot](screenshot.png)
+![Resume Generator Screenshot](AI.jpeg)
 
 ##  Features
 - Input form for job details and skills
