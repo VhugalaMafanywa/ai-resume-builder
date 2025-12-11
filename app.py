@@ -9,7 +9,7 @@ app = Flask(__name__)
 app.secret_key = 'V12345'
 
 # Initialize Cohere client
-co = cohere.Client('XJOhhwIHtY5GSkBWsbDQv7WYbHCht1ttR4zLtzs1')
+co = cohere.Client('I6t5B11k4z1frkGeFPYy85izZuONZN5uWUno18R8')
   
 
 @app.route('/', methods=['GET', 'POST'])
@@ -151,3 +151,4 @@ def create_pdf(source_html):
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
+
