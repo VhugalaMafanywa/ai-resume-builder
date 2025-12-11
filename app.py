@@ -44,7 +44,7 @@ Use a formal and confident tone. Keep it ATS-friendly.
 """
 
         response = co.generate(
-            model='command',
+            model='command-xlarge-nightly',
             prompt=prompt,
             max_tokens=800,
             temperature=0.6
@@ -151,4 +151,5 @@ def create_pdf(source_html):
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
+
 
